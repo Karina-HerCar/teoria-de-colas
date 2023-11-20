@@ -33,6 +33,11 @@ public class mainInterface extends javax.swing.JFrame {
 
         mainContainer = new javax.swing.JPanel();
         titleLbl = new javax.swing.JLabel();
+        ls_2 = new javax.swing.JLabel();
+        ls_1 = new javax.swing.JLabel();
+        prob_1 = new javax.swing.JLabel();
+        miu_1 = new javax.swing.JLabel();
+        lam_1 = new javax.swing.JLabel();
         calc_btn = new javax.swing.JLabel();
         sep2 = new javax.swing.JSeparator();
         miu_txt = new javax.swing.JTextField();
@@ -56,6 +61,31 @@ public class mainInterface extends javax.swing.JFrame {
         titleLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleLbl.setText("Teoría de colas");
         mainContainer.add(titleLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 440, 40));
+
+        ls_2.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
+        ls_2.setForeground(new java.awt.Color(11, 179, 137));
+        ls_2.setText("Promedio de clientes en espera (Ls):");
+        mainContainer.add(ls_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, -1, -1));
+
+        ls_1.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
+        ls_1.setForeground(new java.awt.Color(11, 179, 137));
+        ls_1.setText("Promedio de clientes en espera (Ls):");
+        mainContainer.add(ls_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, -1, -1));
+
+        prob_1.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
+        prob_1.setForeground(new java.awt.Color(11, 179, 137));
+        prob_1.setText("Probabilidad (ρ):");
+        mainContainer.add(prob_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, -1, -1));
+
+        miu_1.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
+        miu_1.setForeground(new java.awt.Color(11, 179, 137));
+        miu_1.setText("Media de atención por hora (μ):");
+        mainContainer.add(miu_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, -1, -1));
+
+        lam_1.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
+        lam_1.setForeground(new java.awt.Color(11, 179, 137));
+        lam_1.setText("Media de clientes por hora (λ):");
+        mainContainer.add(lam_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, -1, -1));
 
         calc_btn.setBackground(new java.awt.Color(37, 54, 82));
         calc_btn.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
@@ -246,12 +276,17 @@ public class mainInterface extends javax.swing.JFrame {
     private javax.swing.JLabel divisorLbl1;
     private javax.swing.JPanel dragged_zone;
     private javax.swing.JLabel inputBg;
+    private javax.swing.JLabel lam_1;
     private javax.swing.JLabel lambda_lbl;
     private javax.swing.JTextField lambdaa_txt;
+    private javax.swing.JLabel ls_1;
+    private javax.swing.JLabel ls_2;
     private javax.swing.JPanel mainContainer;
     private javax.swing.JLabel main_lbl;
+    private javax.swing.JLabel miu_1;
     private javax.swing.JLabel miu_lbl;
     private javax.swing.JTextField miu_txt;
+    private javax.swing.JLabel prob_1;
     private javax.swing.JSeparator sep1;
     private javax.swing.JSeparator sep2;
     private javax.swing.JLabel titleLbl;
