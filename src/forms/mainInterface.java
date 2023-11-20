@@ -33,6 +33,7 @@ public class mainInterface extends javax.swing.JFrame {
 
         mainContainer = new javax.swing.JPanel();
         titleLbl = new javax.swing.JLabel();
+        calc_btn = new javax.swing.JLabel();
         sep2 = new javax.swing.JSeparator();
         miu_txt = new javax.swing.JTextField();
         miu_lbl = new javax.swing.JLabel();
@@ -55,27 +56,44 @@ public class mainInterface extends javax.swing.JFrame {
         titleLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleLbl.setText("Teoría de colas");
         mainContainer.add(titleLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 440, 40));
-        mainContainer.add(sep2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 230, -1));
+
+        calc_btn.setBackground(new java.awt.Color(37, 54, 82));
+        calc_btn.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        calc_btn.setForeground(new java.awt.Color(11, 179, 137));
+        calc_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        calc_btn.setText("Calcular");
+        calc_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        calc_btn.setOpaque(true);
+        calc_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                calc_btnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                calc_btnMouseExited(evt);
+            }
+        });
+        mainContainer.add(calc_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 110, 40));
+        mainContainer.add(sep2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 120, -1));
 
         miu_txt.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         miu_txt.setForeground(new java.awt.Color(11, 179, 137));
         miu_txt.setBorder(null);
         miu_txt.setCaretColor(new java.awt.Color(255, 255, 255));
         miu_txt.setOpaque(false);
-        mainContainer.add(miu_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 230, 40));
+        mainContainer.add(miu_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 120, 40));
 
         miu_lbl.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         miu_lbl.setForeground(new java.awt.Color(11, 179, 137));
         miu_lbl.setText("Capacidad de atención por hora:");
-        mainContainer.add(miu_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
-        mainContainer.add(sep1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 230, -1));
+        mainContainer.add(miu_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        mainContainer.add(sep1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 110, -1));
 
         lambdaa_txt.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         lambdaa_txt.setForeground(new java.awt.Color(11, 179, 137));
         lambdaa_txt.setBorder(null);
         lambdaa_txt.setCaretColor(new java.awt.Color(255, 255, 255));
         lambdaa_txt.setOpaque(false);
-        mainContainer.add(lambdaa_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 230, 40));
+        mainContainer.add(lambdaa_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 110, 40));
 
         lambda_lbl.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         lambda_lbl.setForeground(new java.awt.Color(11, 179, 137));
@@ -171,12 +189,20 @@ public class mainInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_closeBtnMouseClicked
 
     private void closeBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeBtnMouseEntered
-        new ColorTransition(closeBtn, new Color(21,38,64), new Color(11,179,137), new Color(11,179,137),new Color(21,38,64)).execute();
+        new ColorTransition(closeBtn, new Color(21, 38, 64), new Color(11, 179, 137), new Color(11, 179, 137), new Color(21, 38, 64)).execute();
     }//GEN-LAST:event_closeBtnMouseEntered
 
     private void closeBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeBtnMouseExited
-        new ColorTransition(closeBtn, new Color(11,179,137), new Color(21,38,64),new Color(21,38,64) , new Color(11,179,137)).execute();
+        new ColorTransition(closeBtn, new Color(11, 179, 137), new Color(21, 38, 64), new Color(21, 38, 64), new Color(11, 179, 137)).execute();
     }//GEN-LAST:event_closeBtnMouseExited
+
+    private void calc_btnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_calc_btnMouseEntered
+        new ColorTransition(calc_btn, new Color(37, 54, 82), new Color(11, 179, 137), new Color(11, 179, 137), new Color(37, 54, 82)).execute();
+    }//GEN-LAST:event_calc_btnMouseEntered
+
+    private void calc_btnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_calc_btnMouseExited
+        new ColorTransition(calc_btn, new Color(11, 179, 137), new Color(37, 54, 82), new Color(37, 54, 82), new Color(11, 179, 137)).execute();
+    }//GEN-LAST:event_calc_btnMouseExited
 
     /**
      * @param args the command line arguments
@@ -215,6 +241,7 @@ public class mainInterface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel calc_btn;
     private javax.swing.JLabel closeBtn;
     private javax.swing.JLabel divisorLbl1;
     private javax.swing.JPanel dragged_zone;
